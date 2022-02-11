@@ -9,9 +9,10 @@ Feature: Login Secenario Outline
     Then validator click login button
     And validate successfully login message
 
-Examples:
-|userName|password|
-|admin|admin_test|
-|admin1|admin_test1|
 
+    Examples: 
+      | userName | password      |
+      | 'admin'  | 'admin_test'  |
+      | 'admin1' | 'admin_test1' |
+      |     '1234' |          '5678' |
 
