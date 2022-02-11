@@ -9,6 +9,7 @@ public class PageObjectManager {
 	private WebDriver driver;
 	private LoginPage loginPage;
 	private RegistrationPage regPage;
+	
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
 	}
