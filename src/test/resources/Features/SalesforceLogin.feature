@@ -1,7 +1,7 @@
 @Login
 Feature: I want to test Login functionality
 
-  @tag1
+  @tag111111
   Scenario: As a tester I want to test negative login functionality
     Given user open SalesForce Appl
     When user enter userName and Password
