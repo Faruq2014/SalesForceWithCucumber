@@ -14,7 +14,8 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				},
 		snippets=SnippetType.CAMELCASE,		
 		features="src/test/resources/Features",
-				tags="@loginScenarioOutlin",
+
+				tags="@tag111111",
 		glue= {"salesForce_Tests"},
 		monochrome = true,
 		dryRun=false
