@@ -12,7 +12,7 @@ public class DbManagerUserName {
 	 */
 	public String getUserNameFromDataBase() throws SQLException {
 
-	
+	String uName=null;
 		
 			try {
 				Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver"); // sql server driver code
@@ -28,9 +28,10 @@ public class DbManagerUserName {
 				
 				
 				  while (rs.next()) { 
-					  String uName=rs.getString("user_name");
+					  uName=rs.getString("user_name");
 				  System.out.println(uName);
-				  break; }
+				 // break; 
+				  }
 				 
 				
 			con.close();			
@@ -39,7 +40,7 @@ public class DbManagerUserName {
 				e.printStackTrace();
 			}
 			
-			return toString()  ;
+			return uName   ;
 			}
 public static void main(String[] args) throws SQLException {
 	DbManagerUserName dm = new DbManagerUserName();

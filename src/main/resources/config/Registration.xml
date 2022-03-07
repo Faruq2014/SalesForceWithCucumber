@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Personal info change by Faruq</comment>
+<entry key="phone">3334445555</entry>
+<entry key="email">Alam@hmail.com</entry>
+<entry key="lastName">Khan</entry>
+<entry key="firstName">Alam</entry>
+<entry key="jobTitle">Tester</entry>
+<entry key="Country">US</entry>
+<entry key="employees">VA</entry>
+<entry key="Company">Fairfax</entry>
+</properties>

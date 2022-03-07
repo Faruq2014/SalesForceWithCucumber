@@ -27,8 +27,10 @@ public class LoginTest {
 		  System.out.println("Bismillah");
 			pageObjectManager = new PageObjectManager(driver);
 			LoginPage loginPage=pageObjectManager.getLoginPage();
-			//salesForce_ExcellManager.ExcelUtilsWithReturn excel = new salesForce_ExcellManager.ExcelUtilsWithReturn("C:\\Users\\Faruq\\Desktop\\Library\\TEP\\CreateRow_Cell.xlsx","Sheet0");
-			salesForce_ExcellManager.ExcelUtilsWithReturn excel = new salesForce_ExcellManager.ExcelUtilsWithReturn("C:\\Users\\Faruq\\WorksSpace\\Selenium\\SalesForceWithCucumber\\CreateRow_Cell.xlsx","Sheet0");
+			String projectPath = System.getProperty("user.dir");
+			String fileName="/src/main/resources/config/data.xlsx";
+			String fullPath=projectPath+fileName;
+			salesForce_ExcellManager.ExcelUtilsWithReturn excel = new salesForce_ExcellManager.ExcelUtilsWithReturn(fullPath,"Sheet0");
 			loginPage.getUserName(excel.getStringCellData(1, 0));
 			loginPage.getPassword(excel.getStringCellData(1, 1));
 			loginPage.getLogin();		

@@ -73,17 +73,17 @@ public class ExcelUtilsWithReturn {
 		}
 	}
 public static void main(String[] args) {
-	ExcelUtilsWithReturn excel = new ExcelUtilsWithReturn("C:\\Users\\Faruq\\Desktop\\Library\\TEP\\CreateRow_Cell.xlsx","Sheet0");
-	                       excel.getRowCount();
+	String projectPath = System.getProperty("user.dir");
+	String fileName="/src/main/resources/config/data.xlsx";
+	String fullPath=projectPath+fileName;
+	salesForce_ExcellManager.ExcelUtilsWithReturn excel = new salesForce_ExcellManager.ExcelUtilsWithReturn(fullPath,"Sheet0");
+                       excel.getRowCount();
 	                       excel.getColCount();
 	                       excel.getStringCellData(0, 0);
 	                       excel.getStringCellData(0, 1);
 	                       excel.getStringCellData(1, 0);
-	                      excel.getNumericCellData(1, 1);
-	                      excel.getNumericCellData(2, 1);
-	                      excel.getNumericCellData(3, 1);
 	                      //*****************
-	                      excel.getNumericCellData(0, 0);
+	                      excel.getNumericCellData(4, 1);
 }
 	
 }

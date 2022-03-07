@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import salesForce_DB_Manager.DbManager;
 import salesForce_DB_Manager.DbManagerPassword;
 import salesForce_DB_Manager.DbManagerUserName;
 import salesForce_Managers.BrowserManager;
@@ -58,7 +59,8 @@ public class LoginTestWithDb {
 					
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
-			}	
+			}
+				
 	    loginPage.getLogin();		
 			
 	}
