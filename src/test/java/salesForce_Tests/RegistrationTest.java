@@ -8,6 +8,7 @@ import io.cucumber.java.en.When;
 import salesForce_Managers.BrowserManager;
 import salesForce_Managers.PageObjectManager;
 import salesForce_Pages.RegistrationPage;
+import salesForce_XmlManager.ReadFromXML;
 
 
 public class RegistrationTest {
@@ -25,15 +26,25 @@ public class RegistrationTest {
 	@When("user complete registration page")
 	public void userCompleteRegistrationPage() {
 		pageObjectManager=new PageObjectManager(driver);
-		RegistrationPage regPage=pageObjectManager.getRegistrationPage();
+		regPage=pageObjectManager.getRegistrationPage();
 		regPage.tryItFree();
-		regPage.firstName("Kamal");
-		regPage.lastName("Khan");
+		ReadFromXML xml= new ReadFromXML();
+		regPage.firstName(xml.getfirstName());
+		regPage.lastName(xml.getlastName());
+		regPage.jobTitle(xml.getjobTitle());
+		regPage.emailAddress(xml.getemail());
+		regPage.phoneNumber(xml.getphone());
+		//regPage.employees();
+		regPage.getCompEmpl();
+		regPage.getEmpOpt();
+		regPage.compName(xml.getCompany());
+		regPage.compCountryName();
+		regPage.compCountry();
+		regPage.freeTrial();
 		
 	}
 	@Then("I validate the outcomes")
 	public void iValidateTheOutcomes() {
-		//browserManager.closeDriver();
 		driver.close();
 	}
 

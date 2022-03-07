@@ -12,7 +12,7 @@ public class DbManagerPassword {
 	 */
 	public String getPasswordFromDataBase() throws SQLException {
 
-
+            String pword = null;
 		
 			try {
 				Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver"); // sql server driver code
@@ -26,7 +26,7 @@ public class DbManagerPassword {
 				ResultSet rs = stmt.executeQuery(pass);
 				//String pword;
 				while (rs.next()) {
-					String pword=rs.getString("password");
+					 pword=rs.getString("password");
 					System.out.println(pword);					
 			}
 			
@@ -35,7 +35,7 @@ public class DbManagerPassword {
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}
-			return toString()  ; 
+			return pword ; 
 			}
 public static void main(String[] args) throws SQLException {
 	DbManagerPassword dm = new DbManagerPassword();
