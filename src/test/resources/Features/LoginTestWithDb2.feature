@@ -1,4 +1,4 @@
-@Login
+@Reg
 Feature: I want to test Login functionality
 
   @db2
