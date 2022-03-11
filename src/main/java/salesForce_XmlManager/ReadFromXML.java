@@ -93,7 +93,7 @@
 			try {
 				input = new FileInputStream(fullPath);
 				prop.loadFromXML(input);
-				phone = prop.getProperty("email");
+				phone = prop.getProperty("phone");
 				//System.out.println(phone);
 			} catch (Exception exp) {		}
 			return phone ;
@@ -131,14 +131,24 @@
 			} catch (Exception exp) {		}
 			return County ;
 		}
+		public String getAddress() {
+			String Address=null;
+			try {
+				input = new FileInputStream(fullPath);
+				prop.loadFromXML(input);
+				Address = prop.getProperty("Address");
+				//System.out.println(County);
+			} catch (Exception exp) {		}
+			return Address ;
+		}
 		
 
 		public static void main(String[] args) {
 			ReadFromXML xml= new ReadFromXML();
 			System.out.println(xml.getfirstName());
-			xml.getlastName();
+			//xml.getlastName();
 			//xml.setProperties();
-			xml.getProperties();
+			//xml.getProperties();
 		}
 	
 	

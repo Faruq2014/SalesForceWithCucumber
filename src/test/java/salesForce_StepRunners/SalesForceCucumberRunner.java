@@ -14,8 +14,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				},
 		snippets=SnippetType.CAMELCASE,		
 		features="src/test/resources/Features",
-
-				tags="",
+				tags="@registration",
 		glue= {"salesForce_Tests"},
 		monochrome = true,
 		dryRun=false

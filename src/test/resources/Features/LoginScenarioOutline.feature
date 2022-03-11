@@ -1,4 +1,4 @@
-@regression
+@Reg
 Feature: Login Secenario Outline
 
   @loginScenarioOutlin
